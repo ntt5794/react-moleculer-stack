@@ -13,6 +13,10 @@
 * Postman
 * NATS
 
+### Overview
+
+![Architecture](infra.png)
+
 ### Summary ###
 
 * Prerequisites
