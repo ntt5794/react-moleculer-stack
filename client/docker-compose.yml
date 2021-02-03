@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+  fe-react:
+    build: .
+    image: fe-react
+    container_name: fe-react
+    ports:
+    - "3001:80"
+    networks:
+      - "micro_proxy-network"
+
+
+networks:
+    micro_proxy-network:
+      external: true

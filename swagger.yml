@@ -1,0 +1,176 @@
+openapi: '3.0.2'
+info:
+  title: iCommerce APIs
+  version: '1.0'
+servers:
+  - url: http://localhost:3000
+paths:
+  /products/list:
+    get:
+      tags:
+        - products
+      responses:
+        '200':
+          content: 
+            application/json:
+              schema:
+                type: string
+                example: 
+                  {
+                      "rows": [
+                          {
+                              "_id": "601aa502550c600017a246c3",
+                              "name": "architecto",
+                              "description": "Sit ullam sit sunt dolor illo impedit.",
+                              "price": 2308017,
+                              "serial": "3234d149-662c-41e3-bb88-0ed71d72c03a",
+                              "image": "watch_4.jpg",
+                              "type": "nemo",
+                              "createdAt": "2021-02-03T13:28:34.305Z"
+                          },
+                          {
+                              "_id": "601aa502550c600017a246c5",
+                              "name": "ut",
+                              "description": "Iusto ut eum iusto occaecati doloribus.",
+                              "price": 3131011,
+                              "serial": "f258fa51-b09c-49b5-84dd-824679bd324f",
+                              "image": "watch_1.jpg",
+                              "type": "ad",
+                              "createdAt": "2021-02-03T13:28:34.305Z"
+                          }
+                      ],
+                      "total": 2,
+                      "page": 1,
+                      "pageSize": 10,
+                      "totalPages": 1
+                  }
+          description: OK
+
+  /products/:id:
+    get:
+      tags:
+        - products
+      summary: Get product with id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          example:  601aa502550c600017a246c7
+          schema: 
+            type: string
+            maximum: 1
+          description: product id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+                example:
+                  {
+                    "_id": "601aa502550c600017a246c3",
+                    "name": "architecto",
+                    "description": "Sit ullam sit sunt dolor illo impedit.",
+                    "price": 2308017,
+                    "serial": "3234d149-662c-41e3-bb88-0ed71d72c03a",
+                    "image": "watch_4.jpg",
+                    "type": "nemo",
+                    "createdAt": "2021-02-03T13:28:34.305Z"
+                  }
+    put:
+      tags:
+        - products
+      summary: Edit products with given id 
+      parameters:
+        - in: path
+          name: id
+          required: true
+          example:  601aa502550c600017a246c7
+          schema: 
+            type: string
+            maximum: 1
+          description: product id
+      requestBody:
+        required: true
+        content: 
+          application/json:
+            schema:
+              type: string
+              example:
+                {
+                  "_id": "601aa502550c600017a246c3",
+                  "name": "architecto",
+                  "description": "Sit ullam sit sunt dolor illo impedit.",
+                  "price": 2308017,
+                  "serial": "3234d149-662c-41e3-bb88-0ed71d72c03a",
+                  "image": "watch_4.jpg",
+                  "type": "nemo",
+                  "createdAt": "2021-02-03T13:28:34.305Z"
+                }
+      responses:
+        '200':
+          description: OK
+  /products:
+    post:
+      tags:
+        - products
+      summary: Add a new product   
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: string
+              example:
+                {
+                  "_id": "601aa502550c600017a246c3",
+                  "name": "architecto",
+                  "description": "Sit ullam sit sunt dolor illo impedit.",
+                  "price": 2308017,
+                  "serial": "3234d149-662c-41e3-bb88-0ed71d72c03a",
+                  "image": "watch_4.jpg",
+                  "type": "nemo",
+                  "createdAt": "2021-02-03T13:28:34.305Z"
+                }
+
+      responses:
+        '200':
+          description: OK
+  /reports/list:
+    get:
+      tags:
+        - reports
+      summary: List all generated reports
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+                example:
+                  [
+                    {
+                      _id: m1wea05134123,
+                      url: www.masked.org/mini.png?utmUq=…&utmEl=…&utmRdt=…,
+                      lastRequestId: 12314123413,
+                      status: Up,
+                      type: mask,
+                      createdAt: 02/02/2020 21:11,
+                      salt: secret key,
+                      targetURL: www.target.org,
+                      hashURL: www.abc.output.org/mini.png?id=124sd9hb134bh5jhbe1235bjh
+                    },
+                    {
+                      _id: m1wea05134125,
+                      url: www.masked.org/mini.png?utmUq=…&utmEl=…&utmRdt=…,
+                      lastRequestId: 12314123415,
+                      status: Down,
+                      type: Pixel,
+                      createdAt: 02/02/2020 21:11,
+                      salt: secret key,
+                      targetURL: www.target.org,
+                      hashURL: www.abc.output.org/mini.png?id=124sd9hb134bh5jhbe1235bjh
+                    }
+                  ]

@@ -1,0 +1,564 @@
+{
+	"variables": [],
+	"info": {
+		"name": "iCommerce",
+		"_postman_id": "95b2a34e-4122-00a5-b686-a9cc93d6590e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get product list (Paginated)",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/products/list?page=1&pageSize=10&sort=name&match=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "pageSize",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sort",
+							"value": "name",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "match",
+							"value": "",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "b01a568b-8327-47d0-b42e-ced64f08d0aa",
+					"name": "No query",
+					"originalRequest": {
+						"url": "http://localhost:3000/products/list",
+						"method": "GET",
+						"header": [
+							{
+								"key": "check",
+								"value": "mate",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 03 Feb 2021 17:05:20 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "session-id",
+							"key": "session-id",
+							"value": "db632f93-fd36-4b72-9d93-b818d34b35b6",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "x-frame-options",
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"name": "x-request-id",
+							"key": "x-request-id",
+							"value": "06542306-9521-405e-8d6c-7f3e5c7363ce",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 96,
+					"body": "{\"rows\":[{\"_id\":\"601ad07b55bcf40017c79ae4\",\"name\":\"dolorum\",\"description\":\"Id officia ipsam adipisci blanditiis.\",\"price\":347870,\"serial\":\"80da0af1-658f-4cd0-a27a-f33066a92e53\",\"image\":\"watch_1.jpg\",\"type\":\"aliquid\",\"createdAt\":\"2021-02-03T16:34:03.381Z\"},{\"_id\":\"601ad07b55bcf40017c79aec\",\"name\":\"odit\",\"description\":\"Soluta corporis vero magni ut perspiciatis incidunt.\",\"price\":3965582,\"serial\":\"28b5123d-48d9-4638-9c9d-35cb7969a24f\",\"image\":\"watch_4.jpg\",\"type\":\"quo\",\"createdAt\":\"2021-02-03T16:34:03.382Z\"},{\"_id\":\"601ad07b55bcf40017c79aeb\",\"name\":\"molestiae\",\"description\":\"Officia eaque officia vel officia corporis maxime error cum sequi.\",\"price\":510838,\"serial\":\"0f17734e-76a1-4b1b-bb96-4a0865ad12a1\",\"image\":\"watch_2.jpg\",\"type\":\"voluptas\",\"createdAt\":\"2021-02-03T16:34:03.382Z\"},{\"_id\":\"601ad07b55bcf40017c79ae9\",\"name\":\"deserunt\",\"description\":\"Alias aut aut sed illo.\",\"price\":4929885,\"serial\":\"f4ef20c2-008e-4cee-a6bf-5adfbc3408f3\",\"image\":\"watch_2.jpg\",\"type\":\"neque\",\"createdAt\":\"2021-02-03T16:34:03.382Z\"},{\"_id\":\"601ad07b55bcf40017c79aee\",\"name\":\"nam\",\"description\":\"Quia quae et et est quia at eum doloribus harum.\",\"price\":3402794,\"serial\":\"01d7bf22-731c-4e38-8c35-3cdc3147017c\",\"image\":\"watch_3.jpg\",\"type\":\"ab\",\"createdAt\":\"2021-02-03T16:34:03.382Z\"},{\"_id\":\"601ad07b55bcf40017c79ae7\",\"name\":\"a\",\"description\":\"Omnis et maxime.\",\"price\":2815054,\"serial\":\"e03de19d-9660-46aa-8268-e3167ece8483\",\"image\":\"watch_4.jpg\",\"type\":\"illo\",\"createdAt\":\"2021-02-03T16:34:03.382Z\"},{\"_id\":\"601ad07b55bcf40017c79aea\",\"name\":\"ut\",\"description\":\"Porro enim rerum rerum aut quaerat.\",\"price\":218051,\"serial\":\"7dd13f58-b5b6-4ff1-9d8f-312770e2efee\",\"image\":\"watch_3.jpg\",\"type\":\"ipsum\",\"createdAt\":\"2021-02-03T16:34:03.382Z\"},{\"_id\":\"601ad07b55bcf40017c79aef\",\"name\":\"quo\",\"description\":\"Porro ut magni et ullam nemo ipsum reprehenderit libero fugiat.\",\"price\":1847263,\"serial\":\"290aefb4-89ec-498c-b852-ef246b1b601d\",\"image\":\"watch_4.jpg\",\"type\":\"ipsa\",\"createdAt\":\"2021-02-03T16:34:03.382Z\"},{\"_id\":\"601ad07b55bcf40017c79ae5\",\"name\":\"hic\",\"description\":\"Et similique consectetur eum quasi eveniet accusamus.\",\"price\":4517113,\"serial\":\"2c4bfbf5-aa5a-49f3-b519-d39c4f708348\",\"image\":\"watch_2.jpg\",\"type\":\"aut\",\"createdAt\":\"2021-02-03T16:34:03.382Z\"},{\"_id\":\"601ad07b55bcf40017c79ae8\",\"name\":\"est\",\"description\":\"Voluptatem laboriosam rerum nam assumenda quia ut.\",\"price\":4749490,\"serial\":\"a768d4c6-9545-458f-ba06-5d146f5d182c\",\"image\":\"watch_4.jpg\",\"type\":\"voluptas\",\"createdAt\":\"2021-02-03T16:34:03.382Z\"}],\"total\":100,\"page\":1,\"pageSize\":10,\"totalPages\":10}"
+				},
+				{
+					"id": "64a56adf-88e9-4fbb-a092-7a1a2b3a6902",
+					"name": "page no.2 , records per page 20",
+					"originalRequest": {
+						"url": {
+							"raw": "http://localhost:3000/products/list?page=2&pageSize=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "pageSize",
+									"value": "20",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "check",
+								"value": "mate",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 03 Feb 2021 17:06:44 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "session-id",
+							"key": "session-id",
+							"value": "645e91b5-0590-44bb-ba53-f45e1f14504b",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "x-frame-options",
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"name": "x-request-id",
+							"key": "x-request-id",
+							"value": "68f68866-de83-4cac-a8fd-af7e8ca38414",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 95,
+					"body": "{\"rows\":[{\"_id\":\"601ad07b55bcf40017c79af2\",\"name\":\"qui\",\"description\":\"Ut quidem animi.\",\"price\":3029840,\"serial\":\"ba1969a5-f7c1-4a07-adde-3fd4f199202b\",\"image\":\"watch_1.jpg\",\"type\":\"impedit\",\"createdAt\":\"2021-02-03T16:34:03.383Z\"},{\"_id\":\"601ad07b55bcf40017c79af4\",\"name\":\"ratione\",\"description\":\"Accusamus commodi distinctio ipsa aut.\",\"price\":2920219,\"serial\":\"0c876b0e-c116-4022-ac0d-9adabe9a06a7\",\"image\":\"watch_2.jpg\",\"type\":\"qui\",\"createdAt\":\"2021-02-03T16:34:03.383Z\"},{\"_id\":\"601ad07b55bcf40017c79af5\",\"name\":\"omnis\",\"description\":\"Dicta ratione officia officiis.\",\"price\":2002780,\"serial\":\"4520655f-f121-4e00-82d8-fe3ebca173e0\",\"image\":\"watch_4.jpg\",\"type\":\"minima\",\"createdAt\":\"2021-02-03T16:34:03.383Z\"},{\"_id\":\"601ad07b55bcf40017c79af1\",\"name\":\"aperiam\",\"description\":\"Omnis totam ad cumque saepe maiores.\",\"price\":2031531,\"serial\":\"ba7fcfe1-ccb8-426d-9a0b-7d212b506b59\",\"image\":\"watch_2.jpg\",\"type\":\"et\",\"createdAt\":\"2021-02-03T16:34:03.383Z\"},{\"_id\":\"601ad07b55bcf40017c79b00\",\"name\":\"tenetur\",\"description\":\"Consequuntur accusamus non.\",\"price\":3863659,\"serial\":\"caafebbe-e870-46c1-8f03-bad8e5a4bb6b\",\"image\":\"watch_1.jpg\",\"type\":\"omnis\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79afd\",\"name\":\"est\",\"description\":\"Ea culpa voluptatem quia.\",\"price\":1350887,\"serial\":\"bf2f073f-06d8-466d-9471-3ad849b8e591\",\"image\":\"watch_2.jpg\",\"type\":\"quos\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b08\",\"name\":\"ullam\",\"description\":\"Dolor fugit sit praesentium voluptatem et ea sint et qui.\",\"price\":3836257,\"serial\":\"44a3f2df-d6de-40b5-b3d0-3b5327d7eb75\",\"image\":\"watch_1.jpg\",\"type\":\"quia\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b0b\",\"name\":\"aliquid\",\"description\":\"Error debitis ab ratione.\",\"price\":1785589,\"serial\":\"c267ab2f-d5c6-47d6-a795-226a08bb3c38\",\"image\":\"watch_1.jpg\",\"type\":\"animi\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b01\",\"name\":\"dicta\",\"description\":\"Est est ab aliquam autem molestiae ut corporis impedit consequuntur.\",\"price\":3993784,\"serial\":\"813efff3-6874-4eac-a70d-118c21f0f230\",\"image\":\"watch_4.jpg\",\"type\":\"consectetur\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b05\",\"name\":\"sit\",\"description\":\"Quas neque in et cumque modi quaerat recusandae.\",\"price\":958417,\"serial\":\"a71ce748-dc42-41e5-9ef1-9c02df147688\",\"image\":\"watch_3.jpg\",\"type\":\"quo\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b02\",\"name\":\"sint\",\"description\":\"Ut reiciendis ducimus officiis.\",\"price\":2089782,\"serial\":\"5db21292-2a47-4437-91c8-69ed61d34d6a\",\"image\":\"watch_2.jpg\",\"type\":\"rerum\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b03\",\"name\":\"dolore\",\"description\":\"Unde reiciendis natus aut quos et ut dolore.\",\"price\":3882792,\"serial\":\"a3e2a3d6-acb8-4aea-b77c-e36703e5fe0c\",\"image\":\"watch_4.jpg\",\"type\":\"repudiandae\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79afe\",\"name\":\"in\",\"description\":\"Ex sunt sit provident molestias quis.\",\"price\":4543613,\"serial\":\"481bb3ed-07c7-4cff-99b4-d95e8728cee2\",\"image\":\"watch_2.jpg\",\"type\":\"aperiam\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79aff\",\"name\":\"exercitationem\",\"description\":\"Molestiae fugit necessitatibus praesentium voluptas voluptatem accusantium nihil suscipit blanditiis.\",\"price\":2343248,\"serial\":\"0566a9be-4644-4f7f-a245-a75049b87d0b\",\"image\":\"watch_1.jpg\",\"type\":\"sint\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b06\",\"name\":\"nihil\",\"description\":\"Corporis tempore quibusdam quam culpa aut.\",\"price\":2125176,\"serial\":\"aa3a99df-5ac1-4bfa-82d8-3424281dbc4a\",\"image\":\"watch_1.jpg\",\"type\":\"inventore\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b07\",\"name\":\"eos\",\"description\":\"Veritatis qui tenetur ducimus impedit qui voluptatem aut.\",\"price\":2357947,\"serial\":\"9db42720-83fb-43ab-aebd-397cadf19801\",\"image\":\"watch_3.jpg\",\"type\":\"voluptatem\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b0a\",\"name\":\"quia\",\"description\":\"Dolores accusamus autem non sit pariatur repudiandae architecto est dolor.\",\"price\":1962743,\"serial\":\"fe1e8251-c21a-4b61-9b78-e05d5ea70093\",\"image\":\"watch_3.jpg\",\"type\":\"nam\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b09\",\"name\":\"libero\",\"description\":\"Aspernatur placeat accusamus voluptate soluta labore velit officiis odio.\",\"price\":3310505,\"serial\":\"ab145273-7c1b-4fb8-bc95-c6152d3a3e51\",\"image\":\"watch_2.jpg\",\"type\":\"repellendus\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79afc\",\"name\":\"error\",\"description\":\"Doloremque culpa vel et ea et itaque numquam.\",\"price\":1270684,\"serial\":\"15ede1db-16b2-4cc9-870d-e9b1528a3451\",\"image\":\"watch_4.jpg\",\"type\":\"ea\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"},{\"_id\":\"601ad07b55bcf40017c79b04\",\"name\":\"consequatur\",\"description\":\"Atque dolores rerum reprehenderit porro doloribus consequatur optio.\",\"price\":2949147,\"serial\":\"eee1399c-8570-43d2-adbd-d3d89271c1c3\",\"image\":\"watch_2.jpg\",\"type\":\"dolorum\",\"createdAt\":\"2021-02-03T16:34:03.384Z\"}],\"total\":100,\"page\":2,\"pageSize\":20,\"totalPages\":5}"
+				},
+				{
+					"id": "319dce58-02eb-4a18-9505-7c363807a21e",
+					"name": "Find all matching name contains 'ra'",
+					"originalRequest": {
+						"url": {
+							"raw": "http://localhost:3000/products/list?match=ra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"list"
+							],
+							"query": [
+								{
+									"key": "match",
+									"value": "ra",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "check",
+								"value": "mate",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 03 Feb 2021 17:07:41 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "session-id",
+							"key": "session-id",
+							"value": "85d1bce3-ab60-43b0-ac9b-4ea32be171b4",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "x-frame-options",
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"name": "x-request-id",
+							"key": "x-request-id",
+							"value": "71403776-e4ca-4513-85cd-fbe663c2dbc4",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 80,
+					"body": "{\"rows\":[{\"_id\":\"601ad07b55bcf40017c79af4\",\"name\":\"ratione\",\"description\":\"Accusamus commodi distinctio ipsa aut.\",\"price\":2920219,\"serial\":\"0c876b0e-c116-4022-ac0d-9adabe9a06a7\",\"image\":\"watch_2.jpg\",\"type\":\"qui\",\"createdAt\":\"2021-02-03T16:34:03.383Z\"},{\"_id\":\"601ad07b55bcf40017c79b25\",\"name\":\"praesentium\",\"description\":\"Et nam porro in aut sequi aliquid facilis voluptatem.\",\"price\":4656158,\"serial\":\"9f8737e9-3847-4b1f-8745-2875db1f5987\",\"image\":\"watch_2.jpg\",\"type\":\"dolor\",\"createdAt\":\"2021-02-03T16:34:03.386Z\"},{\"_id\":\"601ad07b55bcf40017c79b27\",\"name\":\"quaerat\",\"description\":\"Consequatur in quo ea et ut.\",\"price\":2236049,\"serial\":\"13647e37-9e00-40ad-ae92-d2cdb13ab338\",\"image\":\"watch_3.jpg\",\"type\":\"maxime\",\"createdAt\":\"2021-02-03T16:34:03.386Z\"}],\"total\":3,\"page\":1,\"pageSize\":10,\"totalPages\":1}"
+				}
+			]
+		},
+		{
+			"name": "Get product (By Id)",
+			"request": {
+				"url": "http://localhost:3000/products/601ad07b55bcf40017c79ae7",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "ee33ba30-5250-483f-89c4-c374a2adba8b",
+					"name": "601ad07b55bcf40017c79ae7",
+					"originalRequest": {
+						"url": "http://localhost:3000/products/601ad07b55bcf40017c79ae7",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 03 Feb 2021 17:15:40 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "session-id",
+							"key": "session-id",
+							"value": "b6944054-0774-4218-af2a-dd115873262c",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "x-frame-options",
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"name": "x-request-id",
+							"key": "x-request-id",
+							"value": "e5d96f0c-9b20-46c4-a7de-769b342d34c5",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 90,
+					"body": "{\"_id\":\"601ad07b55bcf40017c79ae7\",\"name\":\"a\",\"description\":\"Omnis et maxime.\",\"price\":2815054,\"serial\":\"e03de19d-9660-46aa-8268-e3167ece8483\",\"image\":\"watch_4.jpg\",\"type\":\"illo\",\"createdAt\":\"2021-02-03T16:34:03.382Z\"}"
+				}
+			]
+		},
+		{
+			"name": "Get user actions logs",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/reports/list?page=1&pageSize=5&sort=session_id&match=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "pageSize",
+							"value": "5",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sort",
+							"value": "session_id",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "match",
+							"value": "",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "cabbe8b8-203b-404d-b701-c9701ef96b6b",
+					"name": "Get user actions logs",
+					"originalRequest": {
+						"url": {
+							"raw": "http://localhost:3000/reports/list?page=1&pageSize=5&sort=session_id&match=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reports",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "pageSize",
+									"value": "5",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "sort",
+									"value": "session_id",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "match",
+									"value": "",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 03 Feb 2021 17:16:52 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "x-frame-options",
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN",
+							"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+						},
+						{
+							"name": "x-request-id",
+							"key": "x-request-id",
+							"value": "351d4143-f2a1-40d1-b634-a389bb3e6f05",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 65,
+					"body": "{\"rows\":[{\"_id\":\"601ad9ee0a0c0c001119d8f8\",\"session_id\":\"0d5293db-eeaa-498b-bc7e-ac6e83a53d91\",\"url\":\"/products/list?page=1&pageSize=10&sort=_id&match=\",\"meta\":{\"params\":{\"page\":\"1\",\"pageSize\":\"10\",\"sort\":\"_id\",\"match\":\"\"},\"query\":{\"page\":\"1\",\"pageSize\":\"10\",\"sort\":\"_id\",\"match\":\"\"}},\"createdAt\":\"2021-02-03T17:14:22.505Z\"},{\"_id\":\"601ad8240a0c0c001119d8f5\",\"session_id\":\"645e91b5-0590-44bb-ba53-f45e1f14504b\",\"url\":\"/products/list?page=2&pageSize=20\",\"meta\":{\"params\":{\"page\":\"2\",\"pageSize\":\"20\"},\"query\":{\"page\":\"2\",\"pageSize\":\"20\"}},\"createdAt\":\"2021-02-03T17:06:44.582Z\"},{\"_id\":\"601ad85d0a0c0c001119d8f6\",\"session_id\":\"85d1bce3-ab60-43b0-ac9b-4ea32be171b4\",\"url\":\"/products/list?match=ra\",\"meta\":{\"params\":{\"match\":\"ra\"},\"query\":{\"match\":\"ra\"}},\"createdAt\":\"2021-02-03T17:07:41.126Z\"},{\"_id\":\"601ada3c0a0c0c001119d8fa\",\"session_id\":\"b6944054-0774-4218-af2a-dd115873262c\",\"url\":\"/products/601ad07b55bcf40017c79ae7\",\"meta\":{\"params\":{\"id\":\"601ad07b55bcf40017c79ae7\"}},\"createdAt\":\"2021-02-03T17:15:40.810Z\"},{\"_id\":\"601ad9fe0a0c0c001119d8f9\",\"session_id\":\"b87f20ee-4f6c-4c78-bd39-d8493655a70d\",\"url\":\"/products/list?page=1&pageSize=10&sort=name&match=\",\"meta\":{\"params\":{\"page\":\"1\",\"pageSize\":\"10\",\"sort\":\"name\",\"match\":\"\"},\"query\":{\"page\":\"1\",\"pageSize\":\"10\",\"sort\":\"name\",\"match\":\"\"}},\"createdAt\":\"2021-02-03T17:14:38.926Z\"}],\"total\":10,\"page\":1,\"pageSize\":5,\"totalPages\":2}"
+				}
+			]
+		}
+	]
+}

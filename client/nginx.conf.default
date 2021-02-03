@@ -1,0 +1,21 @@
+server {
+  listen       $HOST_PORT;
+  server_name  $HOST_DOMAIN;
+
+  location ~ ^/(products|reports)/ {
+    proxy_pass http://micro_proxy_1:3000;
+    proxy_pass_request_headers      on;
+  }
+
+  location ~* \.(jpg) {
+    proxy_pass http://micro_proxy_1:3000;
+    proxy_pass_request_headers      on;
+  }
+  
+  location / {
+    root   /usr/share/nginx/html;
+    index  index.html index.htm;
+    try_files $uri $uri/ /index.html;
+  }
+
+}

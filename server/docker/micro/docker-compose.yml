@@ -1,0 +1,125 @@
+version: "3.5"
+
+services:
+
+  api:
+    build:
+      context: ../..
+    image: icommerce-v1
+    env_file: env
+    environment:
+      NODEID: "node-api"
+      SERVICES: api
+      PORT: 4000
+    links:
+      - nats
+      - redis
+    depends_on:
+      - nats
+      - redis
+    networks:
+      internal-network:
+        aliases: 
+          - "api"
+      proxy-network:
+        aliases:
+          - "api"
+      nats-network:
+        aliases:
+          - "api"
+
+  products:
+    build:
+      context: ../..
+    image: icommerce-v1
+    env_file: env
+    environment:
+      NODEID: "node-products"
+      SERVICES: products
+    links:
+      - nats
+      - redis
+      - mongo
+    depends_on:
+      - nats
+      - redis
+      - mongo
+    networks:
+      internal-network:
+        aliases: 
+          - "products"
+      nats-network:
+        aliases:
+          - "products"
+  reports:
+    build:
+      context: ../..
+    image: icommerce-v1
+    env_file: env
+    environment:
+      NODEID: "node-reports"
+      SERVICES: reports
+    links:
+      - nats
+      - redis
+      - mongo
+    depends_on:
+      - nats
+      - redis
+      - mongo
+    networks:
+      internal-network:
+        aliases: 
+          - "reports"
+      nats-network:
+        aliases:
+          - "reports"
+
+  nats:
+    image: nats
+    networks:
+      nats-network:
+        aliases: 
+          - "nats"
+      # external-network:
+
+  redis:
+    image: redis:alpine
+    networks:
+      internal-network:
+        aliases: 
+          - "redis"
+      # external-network:
+
+  mongo:
+    image: mongo
+    networks:
+      internal-network:
+        aliases: 
+          - "mongo"
+      # external-network:
+    # volumes:
+    #   - ../../db:/data/db
+
+  proxy:
+    image: 'docker.io/bitnami/nginx:1.19-debian-10'
+    volumes:
+      - ./server_block.conf:/opt/bitnami/nginx/conf/server_blocks/server_block.conf
+    #   - ./nginx.conf/:/opt/bitnami/nginx/conf/nginx.conf // overwrite default nginx.conf file
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "api"
+    networks:
+      proxy-network:
+      external-network:
+        aliases:
+          - "services"
+
+networks:
+    internal-network:
+      internal: true
+    external-network:
+    db-network:
+    proxy-network:
+    nats-network:
