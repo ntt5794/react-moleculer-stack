@@ -12,6 +12,7 @@
 * Swagger
 * Postman
 * NATS
+* Jest
 
 ### Overview
 
@@ -48,8 +49,9 @@ docker-compose up --build -d
 ```
 
 ### Testing
-
+I use Jest for testing
 ```
+cd server/
 npm run test
 ```
 
