@@ -11,7 +11,7 @@ Deploy
 cd docker/micro
 docker-compose up
 ```
-localhost:80 localhost:8080
+localhost:3000
 
 # Postman
 
